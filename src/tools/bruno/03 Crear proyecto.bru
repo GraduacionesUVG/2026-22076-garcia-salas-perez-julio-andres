@@ -1,0 +1,26 @@
+meta {
+  name: 03 Crear proyecto
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/projects
+  body: json
+  auth: none
+}
+
+headers {
+  Origin: {{baseUrl}}
+}
+
+body:json {
+  {
+    "name": "{{demoName}}",
+    "description": "Demostración sintética de investigación cualitativa."
+  }
+}
+
+script:post-response {
+  bru.setVar("projectId", res.getBody().project.id);
+}

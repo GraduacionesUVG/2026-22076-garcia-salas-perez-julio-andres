@@ -1,0 +1,63 @@
+import { NextResponse } from "next/server";
+import { requireProjectRole } from "@/src/modules/projects/project.guard";
+import { DelimitationRepo } from "@/src/modules/delimitation/delimitation.repo";
+import { DelimitationService } from "@/src/modules/delimitation/delimitation.service";
+import {
+  DelimitationItemCreateSchema,
+  ProjectIdSchema,
+} from "@/src/modules/delimitation/delimitation.schema";
+
+export const dynamic = "force-dynamic";
+
+export async function POST(
+  req: Request,
+  ctx: { params: Promise<{ id: string }> }
+) {
+  try {
+    const { id } = await ctx.params;
+
+    const pid = ProjectIdSchema.safeParse(id);
+    if (!pid.success) {
+      return NextResponse.json(
+        { ok: false, error: "Invalid project id" },
+        { status: 400 }
+      );
+    }
+
+    const { supabase, user } = await requireProjectRole(pid.data, [
+      "owner",
+      "editor",
+    ]);
+
+    let body: unknown;
+    try {
+      body = await req.json();
+    } catch {
+      body = {};
+    }
+
+    const parsed = DelimitationItemCreateSchema.safeParse(body);
+    if (!parsed.success) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: "Validation error",
+          details: parsed.error.flatten(),
+        },
+        { status: 400 }
+      );
+    }
+
+    const service = new DelimitationService(new DelimitationRepo(supabase));
+    const item = await service.addItem(pid.data, parsed.data, {
+      actorUserId: user.id,
+    });
+
+    return NextResponse.json({ ok: true, item }, { status: 201 });
+  } catch (e: any) {
+    return NextResponse.json(
+      { ok: false, error: e?.message ?? "Unknown error" },
+      { status: e?.status ?? 500 }
+    );
+  }
+}

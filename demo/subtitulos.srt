@@ -1,0 +1,68 @@
+1
+00:00:00,000 --> 00:00:12,000
+Demostración del backend para investigación antropológica cualitativa. Julio Andrés García Salas Pérez ·
+22076.
+
+2
+00:00:12,000 --> 00:00:24,000
+El endpoint de salud confirma que la API está disponible y responde en JSON.
+
+3
+00:00:24,000 --> 00:00:36,000
+La cuenta QA inicia sesión mediante la API. Bruno conserva las cookies; la contraseña no se muestra.
+
+4
+00:00:36,000 --> 00:00:48,000
+Se crea un proyecto temporal para organizar una investigación cualitativa con datos sintéticos.
+
+5
+00:00:48,000 --> 00:01:00,000
+La validación rechaza un proyecto sin nombre con HTTP 400 y explica el campo que falta.
+
+6
+00:01:00,000 --> 00:01:12,000
+Los participantes se registran mediante alias y atributos dentro del proyecto de investigación.
+
+7
+00:01:12,000 --> 00:01:24,000
+El corpus conserva entrevistas y notas de campo con su texto, ubicación, idioma y versión.
+
+8
+00:01:24,000 --> 00:01:36,000
+El libro de códigos organiza categorías analíticas con definiciones y criterios de interpretación.
+
+9
+00:01:36,000 --> 00:01:48,000
+Los memos conservan observaciones e interpretaciones analíticas dentro del proyecto.
+
+10
+00:01:48,000 --> 00:02:00,000
+La API permite consultar el estado y la revisión actual de la delimitación del estudio.
+
+11
+00:02:00,000 --> 00:02:12,000
+El protocolo guarda tema, población, contexto y periodo con control de revisiones.
+
+12
+00:02:12,000 --> 00:02:24,000
+Sin proveedores de IA configurados, la revisión devuelve una evaluación heurística local.
+
+13
+00:02:24,000 --> 00:02:36,000
+El resumen integra los conteos del corpus, los códigos, los memos y la codificación.
+
+14
+00:02:36,000 --> 00:02:48,000
+El backend exporta el libro de códigos en Markdown. La verificación HTTP también comprobó PDF.
+
+15
+00:02:48,000 --> 00:03:00,000
+Se elimina exclusivamente el proyecto temporal creado para esta demostración.
+
+16
+00:03:00,000 --> 00:03:12,000
+Tras la eliminación, el proyecto deja de ser accesible. El servidor responde HTTP 403.
+
+17
+00:03:12,000 --> 00:03:24,000
+Recorrido completado. Backend independiente y proyecto temporal eliminado.

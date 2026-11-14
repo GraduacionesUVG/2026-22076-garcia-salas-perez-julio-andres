@@ -1,0 +1,19 @@
+meta {
+  name: 09 Leer delimitacion
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/api/projects/{{projectId}}/delimitation
+  body: none
+  auth: none
+}
+
+headers {
+  Origin: {{baseUrl}}
+}
+
+script:post-response {
+  const b = res.getBody(); bru.setVar("revision", String(b.data.delim.revision));
+}

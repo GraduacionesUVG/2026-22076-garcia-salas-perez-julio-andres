@@ -1,0 +1,25 @@
+meta {
+  name: 06 Corpus documental
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/api/projects/{{projectId}}/documents
+  body: json
+  auth: none
+}
+
+headers {
+  Origin: {{baseUrl}}
+}
+
+body:json {
+  {
+    "title": "Entrevista sintética sobre el barrio",
+    "content": "En mi barrio nos reunimos cada semana para organizar actividades comunitarias.",
+    "document_type": "interview",
+    "language": "es",
+    "location": "Ciudad de Guatemala"
+  }
+}

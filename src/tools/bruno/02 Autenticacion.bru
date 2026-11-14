@@ -1,0 +1,22 @@
+meta {
+  name: 02 Autenticacion
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/auth/login
+  body: json
+  auth: none
+}
+
+headers {
+  Origin: {{baseUrl}}
+}
+
+body:json {
+  {
+    "email": "{{qaEmail}}",
+    "password": "{{qaPassword}}"
+  }
+}

@@ -1,0 +1,23 @@
+meta {
+  name: 07 Libro de codigos
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/api/projects/{{projectId}}/analysis/codes
+  body: json
+  auth: none
+}
+
+headers {
+  Origin: {{baseUrl}}
+}
+
+body:json {
+  {
+    "name": "Participación comunitaria",
+    "definition": "Actividades colectivas organizadas por habitantes del barrio.",
+    "color": "#0f766e"
+  }
+}

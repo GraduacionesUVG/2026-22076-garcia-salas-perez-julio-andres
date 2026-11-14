@@ -1,0 +1,23 @@
+{
+  "original_repository": "https://github.com/Hayser8/Antropologia",
+  "original_commit": "c84a252712a6fceb937015d00ba87034715e90de",
+  "extracted_on": "2026-11-14",
+  "api_route_files": 85,
+  "server_typescript_files": 95,
+  "unchanged_api_routes": true,
+  "unchanged_server_modules": true,
+  "excluded": [
+    "features/",
+    "components/",
+    "public/",
+    "styles/",
+    "app/page.*",
+    "app/layout.*",
+    "app/**/*.css",
+    "tests de interfaz y herramientas del cliente"
+  ],
+  "pending_student_documents": [
+    "docs/informe_final.pdf",
+    "docs/consentimiento_firmado.pdf"
+  ]
+}
