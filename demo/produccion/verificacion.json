@@ -1,0 +1,275 @@
+{
+  "sourceCommit": "92bc2712dbcb9a5b1de7643ccae4049e9a40c66a",
+  "date": "2026-11-14",
+  "captures": [
+    {
+      "capture": "01",
+      "url": {
+        "left": 520,
+        "top": 250,
+        "width": 1850,
+        "height": 88
+      },
+      "body": {
+        "left": 520,
+        "top": 350,
+        "width": 2040,
+        "height": 332
+      },
+      "apiPixelsUnchanged": true,
+      "cursorOutsideRetainedRegions": true
+    },
+    {
+      "capture": "02",
+      "url": {
+        "left": 520,
+        "top": 250,
+        "width": 1850,
+        "height": 88
+      },
+      "body": {
+        "left": 520,
+        "top": 350,
+        "width": 2040,
+        "height": 526
+      },
+      "apiPixelsUnchanged": true,
+      "cursorOutsideRetainedRegions": true
+    },
+    {
+      "capture": "03",
+      "url": {
+        "left": 520,
+        "top": 250,
+        "width": 1850,
+        "height": 88
+      },
+      "body": {
+        "left": 520,
+        "top": 350,
+        "width": 2040,
+        "height": 846
+      },
+      "apiPixelsUnchanged": true,
+      "cursorOutsideRetainedRegions": true
+    },
+    {
+      "capture": "04",
+      "url": {
+        "left": 520,
+        "top": 250,
+        "width": 1850,
+        "height": 88
+      },
+      "body": {
+        "left": 520,
+        "top": 350,
+        "width": 2040,
+        "height": 696
+      },
+      "apiPixelsUnchanged": true,
+      "cursorOutsideRetainedRegions": true
+    },
+    {
+      "capture": "05",
+      "url": {
+        "left": 520,
+        "top": 250,
+        "width": 1850,
+        "height": 88
+      },
+      "body": {
+        "left": 520,
+        "top": 350,
+        "width": 2040,
+        "height": 996
+      },
+      "apiPixelsUnchanged": true,
+      "cursorOutsideRetainedRegions": true
+    },
+    {
+      "capture": "06",
+      "url": {
+        "left": 520,
+        "top": 250,
+        "width": 1850,
+        "height": 88
+      },
+      "body": {
+        "left": 520,
+        "top": 350,
+        "width": 2040,
+        "height": 979
+      },
+      "apiPixelsUnchanged": true,
+      "cursorOutsideRetainedRegions": true
+    },
+    {
+      "capture": "07",
+      "url": {
+        "left": 520,
+        "top": 250,
+        "width": 1850,
+        "height": 88
+      },
+      "body": {
+        "left": 520,
+        "top": 350,
+        "width": 2040,
+        "height": 977
+      },
+      "apiPixelsUnchanged": true,
+      "cursorOutsideRetainedRegions": true
+    },
+    {
+      "capture": "08",
+      "url": {
+        "left": 520,
+        "top": 250,
+        "width": 1850,
+        "height": 88
+      },
+      "body": {
+        "left": 520,
+        "top": 350,
+        "width": 2040,
+        "height": 977
+      },
+      "apiPixelsUnchanged": true,
+      "cursorOutsideRetainedRegions": true
+    },
+    {
+      "capture": "09",
+      "url": {
+        "left": 520,
+        "top": 250,
+        "width": 1850,
+        "height": 88
+      },
+      "body": {
+        "left": 520,
+        "top": 350,
+        "width": 2040,
+        "height": 896
+      },
+      "apiPixelsUnchanged": true,
+      "cursorOutsideRetainedRegions": true
+    },
+    {
+      "capture": "10",
+      "url": {
+        "left": 520,
+        "top": 250,
+        "width": 1850,
+        "height": 88
+      },
+      "body": {
+        "left": 520,
+        "top": 350,
+        "width": 2040,
+        "height": 996
+      },
+      "apiPixelsUnchanged": true,
+      "cursorOutsideRetainedRegions": true
+    },
+    {
+      "capture": "11",
+      "url": {
+        "left": 520,
+        "top": 250,
+        "width": 1850,
+        "height": 88
+      },
+      "body": {
+        "left": 520,
+        "top": 350,
+        "width": 2040,
+        "height": 978
+      },
+      "apiPixelsUnchanged": true,
+      "cursorOutsideRetainedRegions": true
+    },
+    {
+      "capture": "12",
+      "url": {
+        "left": 520,
+        "top": 250,
+        "width": 1850,
+        "height": 88
+      },
+      "body": {
+        "left": 520,
+        "top": 350,
+        "width": 2040,
+        "height": 766
+      },
+      "apiPixelsUnchanged": true,
+      "cursorOutsideRetainedRegions": true
+    },
+    {
+      "capture": "13",
+      "url": {
+        "left": 520,
+        "top": 250,
+        "width": 1850,
+        "height": 88
+      },
+      "body": {
+        "left": 520,
+        "top": 350,
+        "width": 2040,
+        "height": 780
+      },
+      "apiPixelsUnchanged": true,
+      "cursorOutsideRetainedRegions": true
+    },
+    {
+      "capture": "14",
+      "url": {
+        "left": 520,
+        "top": 250,
+        "width": 1850,
+        "height": 88
+      },
+      "body": {
+        "left": 520,
+        "top": 350,
+        "width": 2040,
+        "height": 332
+      },
+      "apiPixelsUnchanged": true,
+      "cursorOutsideRetainedRegions": true
+    },
+    {
+      "capture": "15",
+      "url": {
+        "left": 520,
+        "top": 250,
+        "width": 1850,
+        "height": 88
+      },
+      "body": {
+        "left": 520,
+        "top": 350,
+        "width": 2040,
+        "height": 370
+      },
+      "apiPixelsUnchanged": true,
+      "cursorOutsideRetainedRegions": true
+    }
+  ],
+  "urlAndApiPixelsPreserved": true,
+  "cursorExcludedByFraming": true,
+  "generativeRetouching": false,
+  "video": {
+    "durationSeconds": 218,
+    "width": 2560,
+    "height": 1440,
+    "fps": 24,
+    "codec": "h264",
+    "bytes": 5280278,
+    "audio": false,
+    "spanishSubtitles": true
+  },
+  "chapters": 4
+}

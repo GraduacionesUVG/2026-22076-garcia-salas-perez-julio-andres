@@ -1,6 +1,6 @@
 # Capturas del backend
 
-Capturas originales de Bruno obtenidas mientras ejecutaba peticiones reales al servidor local. Se utilizaron cuentas QA y datos sintéticos. No son pantallas del frontend del proyecto. El HTTP 400 de validación y el HTTP 403 posterior a la eliminación son resultados esperados.
+Capturas de operaciones reales de Bruno, reencuadradas para excluir el cursor de Codex y los controles ajenos a la evidencia. La URL y los píxeles de los fragmentos de petición y respuesta retenidos se conservan sin retoques. Se utilizaron cuentas QA y datos sintéticos. Los encuadres muestran fragmentos visibles de la respuesta; no son pantallas del frontend del proyecto. El HTTP 400 de validación y el HTTP 403 posterior a la eliminación son resultados esperados.
 
 | Captura | Operación | HTTP |
 |---|---|---|
@@ -23,3 +23,5 @@ Capturas originales de Bruno obtenidas mientras ejecutaba peticiones reales al s
 El proyecto temporal `30c57b37-e550-4e52-a329-6f546d5f7241` fue creado para este recorrido y eliminado al terminar. La sesión QA se cerró posteriormente mediante `/api/auth/logout` con HTTP 200. La colección temporal se retiró del cliente Bruno.
 
 La evidencia JSON del recorrido automatizado independiente está en [evidencia-api.json](evidencia-api.json); comprende 16 operaciones y añade la comprobación de PDF y de acceso desde una cuenta ajena al proyecto.
+
+La revisión visual está documentada en [el informe de encuadres](../demo/produccion/verificacion.json). El JSON completo del recorrido automatizado se conserva en `evidencia-api.json`.

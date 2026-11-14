@@ -8,8 +8,8 @@ Estado: backend y evidencias preparados. **No está completado al 100 %**: falta
 - [x] Sin páginas, layouts, componentes, estilos o recursos del frontend.
 - [x] Sin archivos locales de credenciales, sesiones ni dependencias instaladas versionadas.
 - [x] README con descripción, tecnologías, requisitos, instalación y ejecución.
-- [x] 15 capturas reales del backend en funcionamiento mediante Bruno.
-- [x] Demo MP4 de 3:24, H.264, 1080p y menos de 100 MB.
+- [x] 15 capturas reales de Bruno reencuadradas, sin cursor de Codex.
+- [x] Demo MP4 de 3:38, H.264, 1440p y menos de 100 MB.
 - [x] Subtítulos en español; narración omitida por instrucción del autor.
 - [x] Pruebas unitarias, tipos y compilación verificados.
 - [x] Recorrido real de API y limpieza de proyectos temporales.

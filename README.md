@@ -22,7 +22,7 @@ Esta entrega contiene exclusivamente el backend. Next.js se utiliza como servido
 ## Estructura
 
 ```text
-capturas/                 Evidencias reales de las peticiones en Bruno
+capturas/                 Evidencias de API reencuadradas, sin cursor
 demo/                     demo.mp4 y subtítulos en español
 docs/                     Referencia de API, arquitectura y verificación
 src/                      Raíz instalable del backend
@@ -132,7 +132,7 @@ Los resultados de esta preparación y sus límites se registran en [verificació
 
 - [Video demostrativo sin narración, con subtítulos en español](demo/demo.mp4).
 - [Subtítulos SRT](demo/subtitulos.srt).
-- [Capturas de las operaciones reales de API](capturas/).
+- [Capturas de las operaciones reales de API, sin cursor](capturas/).
 - [Índice de capturas](docs/capturas.md).
 - [Colección de Bruno](src/tools/bruno/) para repetir las operaciones con credenciales propias.
 - `node scripts/demo-api.mjs`: recorrido HTTP automatizado con datos sintéticos, desde `src/`. Requiere el servidor local activo y las cuentas QA configuradas. Crea un proyecto temporal, verifica operaciones y elimina únicamente ese proyecto.

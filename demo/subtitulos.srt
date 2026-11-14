@@ -1,68 +1,83 @@
 1
-00:00:00,000 --> 00:00:12,000
-Demostración del backend para investigación antropológica cualitativa. Julio Andrés García Salas Pérez ·
-22076.
+00:00:00,000 --> 00:00:08,000
+Backend para investigación antropológica cualitativa. Julio Andrés García Salas Pérez · 22076.
 
 2
-00:00:12,000 --> 00:00:24,000
-El endpoint de salud confirma que la API está disponible y responde en JSON.
+00:00:08,000 --> 00:00:11,000
+Acceso y validación. Sesiones, creación de proyectos y validación de entradas.
 
 3
-00:00:24,000 --> 00:00:36,000
-La cuenta QA inicia sesión mediante la API. Bruno conserva las cookies; la contraseña no se muestra.
+00:00:11,000 --> 00:00:20,000
+El endpoint de salud responde en JSON y confirma la disponibilidad del servidor.
 
 4
-00:00:36,000 --> 00:00:48,000
-Se crea un proyecto temporal para organizar una investigación cualitativa con datos sintéticos.
+00:00:20,000 --> 00:00:31,000
+La sesión se inicia mediante cookies. Las credenciales permanecen ocultas en el entorno local.
 
 5
-00:00:48,000 --> 00:01:00,000
-La validación rechaza un proyecto sin nombre con HTTP 400 y explica el campo que falta.
+00:00:31,000 --> 00:00:44,000
+El proyecto reúne el protocolo, los participantes, el corpus y los recursos del análisis.
 
 6
-00:01:00,000 --> 00:01:12,000
-Los participantes se registran mediante alias y atributos dentro del proyecto de investigación.
+00:00:44,000 --> 00:00:56,000
+Un nombre vacío produce HTTP 400: el servidor identifica el campo que debe corregirse.
 
 7
-00:01:12,000 --> 00:01:24,000
-El corpus conserva entrevistas y notas de campo con su texto, ubicación, idioma y versión.
+00:00:56,000 --> 00:00:59,000
+Corpus y trabajo de campo. Participantes, entrevistas, códigos y memos analíticos.
 
 8
-00:01:24,000 --> 00:01:36,000
-El libro de códigos organiza categorías analíticas con definiciones y criterios de interpretación.
+00:00:59,000 --> 00:01:12,000
+La demostración utiliza un participante sintético, con alias y notas dentro de su proyecto.
 
 9
-00:01:36,000 --> 00:01:48,000
-Los memos conservan observaciones e interpretaciones analíticas dentro del proyecto.
+00:01:12,000 --> 00:01:29,000
+La entrevista conserva su texto, tipo documental, ubicación, idioma y revisión.
 
 10
-00:01:48,000 --> 00:02:00,000
-La API permite consultar el estado y la revisión actual de la delimitación del estudio.
+00:01:29,000 --> 00:01:43,000
+El libro de códigos organiza categorías y definiciones para el análisis cualitativo.
 
 11
-00:02:00,000 --> 00:02:12,000
-El protocolo guarda tema, población, contexto y periodo con control de revisiones.
+00:01:43,000 --> 00:01:56,000
+Los memos guardan observaciones analíticas, etiquetas y su revisión dentro del proyecto.
 
 12
-00:02:12,000 --> 00:02:24,000
-Sin proveedores de IA configurados, la revisión devuelve una evaluación heurística local.
+00:01:56,000 --> 00:01:59,000
+Protocolo y análisis. Delimitación, revisión metodológica, resúmenes y exportación.
 
 13
-00:02:24,000 --> 00:02:36,000
-El resumen integra los conteos del corpus, los códigos, los memos y la codificación.
+00:01:59,000 --> 00:02:09,000
+La consulta recupera la delimitación y el número de revisión que utilizará la siguiente escritura.
 
 14
-00:02:36,000 --> 00:02:48,000
-El backend exporta el libro de códigos en Markdown. La verificación HTTP también comprobó PDF.
+00:02:09,000 --> 00:02:25,000
+Tema, contexto, población y periodo se guardan con control de revisiones.
 
 15
-00:02:48,000 --> 00:03:00,000
-Se elimina exclusivamente el proyecto temporal creado para esta demostración.
+00:02:25,000 --> 00:02:43,000
+Sin proveedores de IA, el backend utiliza reglas heurísticas y declara el origen de la revisión.
 
 16
-00:03:00,000 --> 00:03:12,000
-Tras la eliminación, el proyecto deja de ser accesible. El servidor responde HTTP 403.
+00:02:43,000 --> 00:02:55,000
+El resumen integra los conteos de documentos, códigos, memos, segmentos y hallazgos.
 
 17
-00:03:12,000 --> 00:03:24,000
-Recorrido completado. Backend independiente y proyecto temporal eliminado.
+00:02:55,000 --> 00:03:09,000
+El servidor entrega el libro de códigos en Markdown. El recorrido HTTP también verificó PDF.
+
+18
+00:03:09,000 --> 00:03:12,000
+Cierre y trazabilidad. Eliminación del proyecto temporal y comprobación de acceso.
+
+19
+00:03:12,000 --> 00:03:21,000
+Se elimina exclusivamente el proyecto temporal creado para la demostración.
+
+20
+00:03:21,000 --> 00:03:30,000
+Después de eliminar el proyecto, la API rechaza su lectura con HTTP 403.
+
+21
+00:03:30,000 --> 00:03:38,000
+Recorrido completado. Backend independiente, proyecto temporal eliminado y sesión QA cerrada.
