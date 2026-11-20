@@ -35,3 +35,13 @@ La revisión final de la selección, los archivos, las credenciales y los enlace
 Se sustituyeron las 15 capturas y el montaje de video por versiones sin el cursor de Codex. Se compararon los píxeles de la URL y de cada fragmento de API retenido contra las capturas del commit `92bc271`: todos coinciden exactamente. Las únicas transformaciones de las capturas son recorte y encuadre; no se generaron respuestas nuevas.
 
 El nuevo video es H.264, 2560 × 1440, 24 fps y 218 segundos, sin pista de audio. Contiene subtítulos visibles y una pista de subtítulos en español. El cambio se limita a medios, documentación y herramientas de producción del video; no modifica el backend.
+
+## Actualización del 20 de noviembre de 2026
+
+Se incorporó `docs/consentimiento_firmado.pdf` como copia exacta del PDF proporcionado por el estudiante. La revisión visual muestra los datos completados y una firma visible; el archivo tiene una página y no está cifrado. No se modificó, firmó ni aplanó el PDF.
+
+La demo fue sustituida por la nueva grabación preparada por el estudiante: 155.434 segundos, H.264 a 1920 × 1080, 30 fps, 9,056,922 bytes, audio AAC y subtítulos seleccionables en español. La decodificación completa de video y audio terminó sin errores. Los archivos de `demo/grabacion/` contienen las herramientas y tiempos de esa grabación; las secciones anteriores describen versiones históricas.
+
+El README de la grabación indica música de fondo sin narración. El manual oficial pide una duración de 3–5 minutos y narración explicativa: esos requisitos siguen pendientes de ajuste o de confirmación del asesor. No se cambió la nueva demo para intentar resolverlos sin indicación del estudiante. Tampoco se agregó un informe no aprobado ni se creó el PR de entrega final.
+
+La revisión de esta actualización cubre los medios, la copia del consentimiento y el estado de entrega; no vuelve a ejecutar las pruebas del backend que constan arriba. No se modificó la lógica del servidor.

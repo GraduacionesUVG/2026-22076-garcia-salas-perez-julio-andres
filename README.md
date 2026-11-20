@@ -144,7 +144,9 @@ Los resultados de esta preparación y sus límites se registran en [verificació
 - [Checklist de entrega](docs/checklist-entrega.md).
 - [Procedencia y exclusiones de la extracción](docs/procedencia-backend.json).
 
-**Pendientes a cargo del estudiante:** el informe final aprobado debe agregarse como `docs/informe_final.pdf` y el consentimiento firmado como `docs/consentimiento_firmado.pdf`. Esos documentos aún no forman parte de esta entrega. El checklist y el Pull Request de entrega final deben completarse después de incorporarlos.
+El [consentimiento firmado](docs/consentimiento_firmado.pdf) está incluido y se conserva como fue entregado por el estudiante.
+
+**Pendiente:** agregar el informe final aprobado como `docs/informe_final.pdf`. La demo actual mide 2:35 y se presenta sin narración; el manual oficial pide 3–5 minutos y narración explicativa. Esos puntos deben resolverse o validarse con el asesor antes de marcar el checklist al 100 % y crear el Pull Request final. Consultar el [checklist actualizado](docs/checklist-entrega.md).
 
 ## Autor y licencia
 

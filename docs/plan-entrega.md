@@ -9,4 +9,4 @@ Alcance autorizado: extraer el servidor existente a `src/`, sin páginas ni comp
 5. Grabar una demo de 3–5 minutos, sin narración, con subtítulos en español, y verificar formato, duración y tamaño.
 6. Revisar secretos, ausencia de frontend y limpieza de procesos. Preparar cambios en el fork de Hayser8.
 
-Pendientes del estudiante: informe final aprobado y consentimiento firmado. El PR de entrega final debe esperar a ambos documentos; no marcar el checklist al 100 %.
+Actualización del 20 de noviembre: consentimiento firmado incorporado. Pendientes: informe final aprobado y conformidad de la nueva demo con la duración y narración del manual. El PR de entrega final debe esperar al checklist completo.

@@ -1,11 +1,46 @@
 # Video demostrativo
 
-`demo.mp4` dura **3 minutos y 38 segundos**, tiene resolución **2560 × 1440**, codec **H.264** y **24 fps**. No contiene audio ni narración. Incluye subtítulos visibles en español y una pista seleccionable, además de `subtitulos.srt`.
+`demo.mp4` es una **grabación real** de la colección de Bruno enviando las 16 peticiones al backend en ejecución local (`http://localhost:3317`), con una cuenta QA y datos sintéticos. Dura **2 minutos y 35 segundos**, a **1920 × 1080** y **30 fps** (H.264). Incluye música de fondo, sin narración, una pista de subtítulos seleccionable en español y el archivo `subtitulos.srt`.
 
-La presentación utiliza fondo marfil, tipografía editorial en verde oscuro, cuatro capítulos, encabezados de operación y transiciones breves. El encuadre da prioridad a los cuerpos de petición y respuesta; las consultas GET muestran un acercamiento a la respuesta para evitar paneles vacíos.
+Grabación del 19 de noviembre de 2026. Las 16 respuestas devolvieron el código esperado:
 
-El video conserva las operaciones reales de Bruno de la primera demostración. Las 15 capturas se reencuadraron para excluir la barra lateral, las pestañas, el botón de envío donde aparecía el cursor y el espacio sobrante. La URL original y los píxeles de los fragmentos de API retenidos se conservaron exactamente, sin reconstruir ni regenerar texto o datos. El informe de encuadres está en `produccion/verificacion.json`.
+| # | Petición | Respuesta |
+|---|---|---|
+| 01 | `GET /api/health` | 200 |
+| 02 | `POST /api/auth/login` | 200 |
+| 03 | `POST /api/projects` | 201 |
+| 04 | `POST /api/projects` con nombre vacío | 400 |
+| 05 | `POST /api/projects/:id/participants` | 201 |
+| 06 | `POST /api/projects/:id/documents` | 201 |
+| 07 | `POST /api/projects/:id/analysis/codes` | 201 |
+| 08 | `POST /api/projects/:id/analysis/memos` | 201 |
+| 09 | `GET /api/projects/:id/delimitation` | 200 |
+| 10 | `PATCH /api/projects/:id/delimitation` | 200 |
+| 11 | `POST /api/projects/:id/delimitation/review` | 200 |
+| 12 | `GET /api/projects/:id/analysis/overview` | 200 |
+| 13 | `GET /api/projects/:id/exports/codebook?format=md` | 200 |
+| 14 | `DELETE /api/projects/:id` | 200 |
+| 15 | `GET /api/projects/:id` después de eliminar | 403 |
+| 16 | `POST /api/auth/logout` | 200 |
 
-Es un montaje de evidencias de API, no una grabación continua del escritorio. La interfaz pertenece al cliente externo Bruno; no se añadió una aplicación de frontend al proyecto.
+La edición solo agrega encima de la grabación:
+- un marco;
+- una franja inferior con el número de paso, la ruta y el código recibido;
+- una portada y un cierre.
 
-La portada se encuentra en `portada.png` y las fuentes de producción reproducibles en `produccion/`.
+En la respuesta del inicio de sesión se difumina el correo de la cuenta QA. Las contraseñas no aparecen: Bruno muestra `{{qaPassword}}`. El servidor se ejecutó sin claves de IA, así que la revisión metodológica usa reglas heurísticas.
+
+`portada.png` y `vista-previa.png` son cuadros del video. Bruno es un cliente externo; su interfaz no forma parte del proyecto.
+
+## Cómo se grabó
+
+Las herramientas están en `grabacion/`:
+
+1. Iniciar el backend (`npm run dev -- --port 3317` desde `src/`) y crear `src/tools/bruno/environments/Local.bru` con la cuenta QA. Ese archivo está excluido de Git.
+2. Abrir Bruno con `--remote-debugging-port=9333`, abrir la colección `src/tools/bruno` y seleccionar el entorno `Local`.
+3. `node demo/grabacion/grabar.mjs SALIDA` abre cada petición, muestra su cuerpo, pulsa **Send** y guarda los cuadros reales de la ventana de Bruno junto con `timeline.json`.
+4. `node demo/grabacion/overlays.mjs SALIDA/timeline.json CAPAS` genera la portada, el cierre y las franjas.
+5. `node demo/grabacion/editar.mjs SALIDA CAPAS demo.mp4 [musica.wav]` monta el video.
+6. `node demo/grabacion/subtitulos.mjs demo.tiempos.json demo/subtitulos.srt` genera los subtítulos.
+
+`timeline.json` y `tiempos.json` conservan los tiempos y los códigos de respuesta de esta grabación. La carpeta `produccion/` contiene las herramientas de la versión anterior, un montaje de capturas, como referencia.

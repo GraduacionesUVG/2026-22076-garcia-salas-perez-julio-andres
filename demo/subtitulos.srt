@@ -1,83 +1,71 @@
 1
-00:00:00,000 --> 00:00:08,000
-Backend para investigación antropológica cualitativa. Julio Andrés García Salas Pérez · 22076.
+00:00:00,000 --> 00:00:03,400
+Demo del backend de investigación antropológica · Julio Andrés García Salas Pérez · 22076. Grabación real en Bruno contra el servidor local.
 
 2
-00:00:08,000 --> 00:00:11,000
-Acceso y validación. Sesiones, creación de proyectos y validación de entradas.
+00:00:04,989 --> 00:00:11,952
+01/16 · Disponibilidad del servidor: GET /api/health → 200 OK
 
 3
-00:00:11,000 --> 00:00:20,000
-El endpoint de salud responde en JSON y confirma la disponibilidad del servidor.
+00:00:11,952 --> 00:00:21,755
+02/16 · Inicio de sesión con la cuenta QA: POST /api/auth/login → 200 OK
 
 4
-00:00:20,000 --> 00:00:31,000
-La sesión se inicia mediante cookies. Las credenciales permanecen ocultas en el entorno local.
+00:00:21,755 --> 00:00:32,574
+03/16 · Crear un proyecto: POST /api/projects → 201 Created
 
 5
-00:00:31,000 --> 00:00:44,000
-El proyecto reúne el protocolo, los participantes, el corpus y los recursos del análisis.
+00:00:32,574 --> 00:00:41,166
+04/16 · Nombre vacío: la API lo rechaza: POST /api/projects → 400 Bad Request
 
 6
-00:00:44,000 --> 00:00:56,000
-Un nombre vacío produce HTTP 400: el servidor identifica el campo que debe corregirse.
+00:00:41,166 --> 00:00:50,986
+05/16 · Registrar un participante: POST /api/projects/:id/participants → 201 Created
 
 7
-00:00:56,000 --> 00:00:59,000
-Corpus y trabajo de campo. Participantes, entrevistas, códigos y memos analíticos.
+00:00:50,986 --> 00:01:01,422
+06/16 · Agregar una entrevista al corpus: POST /api/projects/:id/documents → 201 Created
 
 8
-00:00:59,000 --> 00:01:12,000
-La demostración utiliza un participante sintético, con alias y notas dentro de su proyecto.
+00:01:01,422 --> 00:01:11,062
+07/16 · Crear un código: POST /api/projects/:id/analysis/codes → 201 Created
 
 9
-00:01:12,000 --> 00:01:29,000
-La entrevista conserva su texto, tipo documental, ubicación, idioma y revisión.
+00:01:11,062 --> 00:01:20,725
+08/16 · Escribir un memo analítico: POST /api/projects/:id/analysis/memos → 201 Created
 
 10
-00:01:29,000 --> 00:01:43,000
-El libro de códigos organiza categorías y definiciones para el análisis cualitativo.
+00:01:20,725 --> 00:01:28,865
+09/16 · Leer la delimitación: GET /api/projects/:id/delimitation → 200 OK
 
 11
-00:01:43,000 --> 00:01:56,000
-Los memos guardan observaciones analíticas, etiquetas y su revisión dentro del proyecto.
+00:01:28,865 --> 00:01:38,104
+10/16 · Guardar la delimitación: PATCH /api/projects/:id/delimitation → 200 OK
 
 12
-00:01:56,000 --> 00:01:59,000
-Protocolo y análisis. Delimitación, revisión metodológica, resúmenes y exportación.
+00:01:38,104 --> 00:01:48,747
+11/16 · Revisión metodológica: POST /api/projects/:id/delimitation/review → 200 OK
 
 13
-00:01:59,000 --> 00:02:09,000
-La consulta recupera la delimitación y el número de revisión que utilizará la siguiente escritura.
+00:01:48,747 --> 00:01:56,758
+12/16 · Resumen del análisis: GET /api/projects/:id/analysis/overview → 200 OK
 
 14
-00:02:09,000 --> 00:02:25,000
-Tema, contexto, población y periodo se guardan con control de revisiones.
+00:01:56,758 --> 00:02:06,113
+13/16 · Exportar el libro de códigos: GET /api/projects/:id/exports/codebook → 200 OK
 
 15
-00:02:25,000 --> 00:02:43,000
-Sin proveedores de IA, el backend utiliza reglas heurísticas y declara el origen de la revisión.
+00:02:06,113 --> 00:02:13,891
+14/16 · Eliminar el proyecto temporal: DELETE /api/projects/:id → 200 OK
 
 16
-00:02:43,000 --> 00:02:55,000
-El resumen integra los conteos de documentos, códigos, memos, segmentos y hallazgos.
+00:02:13,891 --> 00:02:21,032
+15/16 · Verificar que ya no existe: GET /api/projects/:id → 403 Forbidden
 
 17
-00:02:55,000 --> 00:03:09,000
-El servidor entrega el libro de códigos en Markdown. El recorrido HTTP también verificó PDF.
+00:02:21,032 --> 00:02:31,034
+16/16 · Cerrar sesión: POST /api/auth/logout → 200 OK
 
 18
-00:03:09,000 --> 00:03:12,000
-Cierre y trazabilidad. Eliminación del proyecto temporal y comprobación de acceso.
-
-19
-00:03:12,000 --> 00:03:21,000
-Se elimina exclusivamente el proyecto temporal creado para la demostración.
-
-20
-00:03:21,000 --> 00:03:30,000
-Después de eliminar el proyecto, la API rechaza su lectura con HTTP 403.
-
-21
-00:03:30,000 --> 00:03:38,000
-Recorrido completado. Backend independiente, proyecto temporal eliminado y sesión QA cerrada.
+00:02:31,034 --> 00:02:35,434
+16 peticiones enviadas, 16 respuestas esperadas. El proyecto temporal se eliminó y la sesión se cerró.
