@@ -1,6 +1,6 @@
 # Checklist de entrega 2026
 
-Actualizado el **20 de noviembre de 2026**. Estado: consentimiento firmado agregado y nueva demo preparada para subir al fork. **No está completado al 100 %**: falta el informe final aprobado y resolver la duración/narración de la demo antes del Pull Request final.
+Actualizado el **20 de noviembre de 2026**. Estado: consentimiento firmado incluido y demo narrada verificada. **No está completado al 100 %**: falta el informe final aprobado y completar el proceso de entrega mediante Pull Request.
 
 - [x] Fork de `GraduacionesUVG` con el nombre asignado, bajo `Hayser8`.
 - [x] Estructura `capturas/`, `demo/`, `docs/`, `src/` y README en la raíz.
@@ -9,9 +9,9 @@ Actualizado el **20 de noviembre de 2026**. Estado: consentimiento firmado agreg
 - [x] Configuración de ejemplo y exclusiones de credenciales/dependencias instaladas.
 - [x] README con descripción, tecnologías, requisitos, instalación, ejecución y referencias a los entregables.
 - [x] 15 capturas PNG numeradas del backend en funcionamiento mediante Bruno.
-- [x] `demo/demo.mp4` presente y reproducible: H.264, 1920 × 1080, 30 fps, 9,056,922 bytes, AAC y subtítulos en español.
-- [ ] Duración de demo entre 3 y 5 minutos: la nueva versión dura **155.434 segundos (2:35)**.
-- [ ] Narración explicativa: el README de la grabación indica música de fondo sin narración; el manual exige narración. Ajustar o confirmar expresamente con el asesor la alternativa de subtítulos.
+- [x] `demo/demo.mp4` presente y reproducible: H.264, 1920 × 1080, 30 fps, 13,922,595 bytes (menor a 100 MB), audio AAC y subtítulos en español. Decodificación completa sin errores.
+- [x] Duración de demo entre 3 y 5 minutos: la versión narrada dura **249.433 segundos (4:09)**.
+- [x] Narración explicativa incluida, con introducción, recorrido de operaciones del backend y cierre. 40 subtítulos SRT ordenados dentro de la duración del video; también se incluye una pista seleccionable.
 - [x] Pruebas unitarias, tipos y compilación documentados en la preparación anterior; no se modificó el código de la aplicación en esta actualización.
 - [x] Recorrido de API y evidencia de limpieza documentados.
 - [x] Esquema de base de datos y verificación local de restauración incluidos.

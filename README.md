@@ -130,7 +130,7 @@ Los resultados de esta preparación y sus límites se registran en [verificació
 
 ## Demo y capturas
 
-- [Video demostrativo sin narración, con subtítulos en español](demo/demo.mp4).
+- [Video demostrativo narrado, con subtítulos en español](demo/demo.mp4).
 - [Subtítulos SRT](demo/subtitulos.srt).
 - [Capturas de las operaciones reales de API, sin cursor](capturas/).
 - [Índice de capturas](docs/capturas.md).
@@ -146,7 +146,9 @@ Los resultados de esta preparación y sus límites se registran en [verificació
 
 El [consentimiento firmado](docs/consentimiento_firmado.pdf) está incluido y se conserva como fue entregado por el estudiante.
 
-**Pendiente:** agregar el informe final aprobado como `docs/informe_final.pdf`. La demo actual mide 2:35 y se presenta sin narración; el manual oficial pide 3–5 minutos y narración explicativa. Esos puntos deben resolverse o validarse con el asesor antes de marcar el checklist al 100 % y crear el Pull Request final. Consultar el [checklist actualizado](docs/checklist-entrega.md).
+La demo narrada dura **4:09**, está en **1920 × 1080** y conserva los subtítulos en español. Se verificó su decodificación completa sin errores.
+
+**Pendiente:** agregar el informe final aprobado como `docs/informe_final.pdf`, confirmar la fecha y hora límite y completar el [checklist actualizado](docs/checklist-entrega.md) antes de crear el Pull Request final. Después corresponde dar seguimiento hasta su aprobación e integración.
 
 ## Autor y licencia
 

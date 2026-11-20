@@ -1,6 +1,8 @@
 # Video demostrativo
 
-`demo.mp4` es una **grabación real** de la colección de Bruno enviando las 16 peticiones al backend en ejecución local (`http://localhost:3317`), con una cuenta QA y datos sintéticos. Dura **2 minutos y 35 segundos**, a **1920 × 1080** y **30 fps** (H.264). Incluye música de fondo, sin narración, una pista de subtítulos seleccionable en español y el archivo `subtitulos.srt`.
+`demo.mp4` es una **grabación real** de la colección de Bruno enviando las 16 peticiones al backend en ejecución local (`http://localhost:3317`), con una cuenta QA y datos sintéticos. Dura **4 minutos y 9 segundos**, a **1920 × 1080** y **30 fps** (H.264). Incluye **narración del autor**, música de fondo baja, una pista de subtítulos seleccionable en español y el archivo `subtitulos.srt`.
+
+La duración la marca la narración. Cada explicación se muestra sobre el paso que describe. Los silencios se recortaron a pausas breves, y los tramos de la grabación sin voz se aceleran a 2× para no saltarse ningún paso.
 
 Grabación del 19 de noviembre de 2026. Las 16 respuestas devolvieron el código esperado:
 
@@ -43,4 +45,16 @@ Las herramientas están en `grabacion/`:
 5. `node demo/grabacion/editar.mjs SALIDA CAPAS demo.mp4 [musica.wav]` monta el video.
 6. `node demo/grabacion/subtitulos.mjs demo.tiempos.json demo/subtitulos.srt` genera los subtítulos.
 
-`timeline.json` y `tiempos.json` conservan los tiempos y los códigos de respuesta de esta grabación. La carpeta `produccion/` contiene las herramientas de la versión anterior, un montaje de capturas, como referencia.
+`timeline.json` y `tiempos.json` conservan los tiempos y los códigos de respuesta de la grabación base de 2:35; sus marcas de tiempo no corresponden al montaje narrado de 4:09. El plan de edición narrado se conserva en `grabacion/narracion/plan.json`. La carpeta `produccion/` contiene las herramientas de la versión anterior, un montaje de capturas, como referencia.
+
+## Narración
+
+La narración se grabó aparte, con el video original en pantalla. Los scripts de `grabacion/narracion/` hacen la edición:
+
+1. Aislar la voz de la música con Demucs (`htdemucs`, dos pistas).
+2. Detectar los tramos con voz (`vad.py`, Silero VAD) y transcribirlos con marcas de tiempo por palabra (`tr.py`, faster-whisper).
+3. Alinear cada cuadro de la grabación narrada con la versión anterior de `demo.mp4`, sin narración y de 2:35, para saber qué paso se mostraba al hablar. Esa versión sigue en el historial de Git y es la fuente de los cuadros.
+4. `plan.py` decide qué se conserva: la voz a velocidad real, los silencios recortados y los tramos sin voz acelerados. `plan.json` guarda el resultado.
+5. `build.py` arma los cuadros y la pista de voz. Luego se limpian (filtro, reducción de ruido, compresión y `loudnorm` a -16 LUFS) y se mezclan con la música de `audio.mjs`, que baja automáticamente mientras se habla.
+
+Los subtítulos salen de la transcripción del audio final, con correcciones de términos técnicos. Se omitió una frase ininteligible que se grabó encima de la música.

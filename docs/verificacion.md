@@ -28,7 +28,7 @@ Las pruebas unitarias utilizan dobles de dependencias donde corresponde. El reco
 
 Dos suites de infraestructura del proyecto original no se trasladaron: la auditoría de llamadas desde archivos del cliente y el inventario mixto de pruebas, porque dependen del frontend excluido. Se adaptaron rutas de migraciones, el prefijo de la carpeta de entrega y la configuración de pruebas HTTP para esperar `/api/health` en lugar de una página raíz. La lógica de negocio y las rutas originales no se modificaron.
 
-La revisión final de la selección, los archivos, las credenciales y los enlaces se realizó en esta misma sesión, sin un revisor independiente. El informe final aprobado y el consentimiento firmado permanecen pendientes del estudiante.
+La revisión final de la selección, los archivos, las credenciales y los enlaces se realizó en esta misma sesión, sin un revisor independiente. A esa fecha, el informe final aprobado y el consentimiento firmado permanecían pendientes del estudiante. Las actualizaciones posteriores constan abajo.
 
 ## Revisión visual posterior
 
@@ -36,12 +36,22 @@ Se sustituyeron las 15 capturas y el montaje de video por versiones sin el curso
 
 El nuevo video es H.264, 2560 × 1440, 24 fps y 218 segundos, sin pista de audio. Contiene subtítulos visibles y una pista de subtítulos en español. El cambio se limita a medios, documentación y herramientas de producción del video; no modifica el backend.
 
-## Actualización del 20 de noviembre de 2026
+## Primera actualización del 20 de noviembre de 2026
 
 Se incorporó `docs/consentimiento_firmado.pdf` como copia exacta del PDF proporcionado por el estudiante. La revisión visual muestra los datos completados y una firma visible; el archivo tiene una página y no está cifrado. No se modificó, firmó ni aplanó el PDF.
 
 La demo fue sustituida por la nueva grabación preparada por el estudiante: 155.434 segundos, H.264 a 1920 × 1080, 30 fps, 9,056,922 bytes, audio AAC y subtítulos seleccionables en español. La decodificación completa de video y audio terminó sin errores. Los archivos de `demo/grabacion/` contienen las herramientas y tiempos de esa grabación; las secciones anteriores describen versiones históricas.
 
-El README de la grabación indica música de fondo sin narración. El manual oficial pide una duración de 3–5 minutos y narración explicativa: esos requisitos siguen pendientes de ajuste o de confirmación del asesor. No se cambió la nueva demo para intentar resolverlos sin indicación del estudiante. Tampoco se agregó un informe no aprobado ni se creó el PR de entrega final.
+En esa versión, el README de la grabación indicaba música de fondo sin narración. El manual oficial pide una duración de 3–5 minutos y narración explicativa: esos requisitos permanecieron pendientes hasta la revisión narrada descrita abajo. Tampoco se agregó un informe no aprobado ni se creó el PR de entrega final.
 
 La revisión de esta actualización cubre los medios, la copia del consentimiento y el estado de entrega; no vuelve a ejecutar las pruebas del backend que constan arriba. No se modificó la lógica del servidor.
+
+## Sustitución por la demo narrada del 20 de noviembre de 2026
+
+Se revisó la nueva versión preparada por el estudiante y se conservó su contenido sin volver a editarla. `demo/demo.mp4` dura **249.433 segundos (4:09)**: H.264, 1920 × 1080, 30 fps, 13,922,595 bytes, audio AAC y pista de subtítulos en español. Cumple los requisitos técnicos de duración, resolución, formato y tamaño del manual. La decodificación completa de video y audio con FFmpeg terminó con código 0 y sin errores.
+
+La revisión de audio con Earshot detectó narración en el recorrido: nivel integrado de -17.7 LUFS y pico verdadero de -3.1 dBTP. Se revisaron cuadros de la introducción y de las operaciones, junto con el texto de los subtítulos, que explica autenticación QA, proyectos, validaciones, análisis, exportación y cierre de sesión. Los 40 subtítulos SRT están ordenados y terminan a los 240.940 segundos, dentro de la duración del video. Esta revisión confirma la presencia de voz; no constituye una comprobación independiente palabra por palabra de la transcripción.
+
+SHA-256 del video revisado: `182e26b5730d83db99ba7ac626cf7a419c274ae25dc26e13d92beef66aeb442f`.
+
+Los scripts y el plan de edición en `demo/grabacion/narracion/` se incluyen como herramientas de producción; no agregan código de frontend a la aplicación. No se modificó `src/` ni se repitieron las pruebas del servidor por esta actualización de medios y documentación. Siguen pendientes el informe final aprobado, la confirmación de la fecha y hora límite y el proceso de Pull Request con su aprobación e integración.

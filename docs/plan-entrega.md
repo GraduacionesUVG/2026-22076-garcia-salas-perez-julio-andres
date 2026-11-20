@@ -6,7 +6,7 @@ Alcance autorizado: extraer el servidor existente a `src/`, sin páginas ni comp
 2. Instalar y verificar la compilación, tipos y pruebas del backend aislado.
 3. Documentar instalación, API y base de datos, con límites comprobados.
 4. Ejecutar un recorrido real de la API con cuentas QA y datos sintéticos, capturar al menos diez operaciones, borrar exclusivamente los recursos de la demo.
-5. Grabar una demo de 3–5 minutos, sin narración, con subtítulos en español, y verificar formato, duración y tamaño.
+5. Grabar una demo de 3–5 minutos, con narración explicativa y subtítulos en español, y verificar formato, duración y tamaño.
 6. Revisar secretos, ausencia de frontend y limpieza de procesos. Preparar cambios en el fork de Hayser8.
 
-Actualización del 20 de noviembre: consentimiento firmado incorporado. Pendientes: informe final aprobado y conformidad de la nueva demo con la duración y narración del manual. El PR de entrega final debe esperar al checklist completo.
+Actualización del 20 de noviembre: consentimiento firmado incorporado y demo narrada verificada (4:09, 1080p, 30 fps, H.264 y audio AAC). Pendientes: informe final aprobado y confirmación de la fecha y hora límite. El PR de entrega final debe esperar al checklist completo; luego corresponde dar seguimiento hasta su aprobación e integración.
