@@ -63,3 +63,5 @@ El estudiante proporcionó su informe final y solicitó incorporarlo y crear el 
 SHA-256 del informe: `1cb8f431980ba96fecaa182f8d4e2d895b649931904e88a29c8ae1009145e252`.
 
 Se actualizó el enlace del README y se retiró el informe de los documentos pendientes. Esta revisión no revalida académicamente el trabajo ni vuelve a ejecutar las pruebas históricas del servidor: solo incorpora el documento final y prepara su entrega. La aprobación e integración del Pull Request corresponden a la universidad; la fecha límite debe confirmarse con su comunicación oficial.
+
+Se creó el [Pull Request #1](https://github.com/GraduacionesUVG/2026-22076-garcia-salas-perez-julio-andres/pull/1) con `Hayser8`, desde el fork `Hayser8:main` hacia el repositorio asignado de `GraduacionesUVG:main`. Se verificó que quedó abierto para revisión, sin estado de borrador, el 20 de noviembre de 2026 (Guatemala). Los commits de esta publicación tienen a `Hayser8` como autor y committer, sin coautores.

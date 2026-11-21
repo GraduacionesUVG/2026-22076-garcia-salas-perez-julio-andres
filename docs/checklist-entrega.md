@@ -1,6 +1,6 @@
 # Checklist de entrega 2026
 
-Actualizado el **20 de noviembre de 2026**. Estado: informe final, consentimiento firmado y demo narrada incluidos. Los entregables están preparados; quedan la formalización mediante Pull Request, su revisión e integración y la comprobación del plazo oficial.
+Actualizado el **20 de noviembre de 2026**. Estado: informe final, consentimiento firmado y demo narrada incluidos; [Pull Request #1 abierto](https://github.com/GraduacionesUVG/2026-22076-garcia-salas-perez-julio-andres/pull/1) con `Hayser8`. Quedan la revisión e integración por la universidad y la comprobación del plazo oficial.
 
 - [x] Fork de `GraduacionesUVG` con el nombre asignado, bajo `Hayser8`.
 - [x] Estructura `capturas/`, `demo/`, `docs/`, `src/` y README en la raíz.
@@ -18,7 +18,7 @@ Actualizado el **20 de noviembre de 2026**. Estado: informe final, consentimient
 - [x] `docs/consentimiento_firmado.pdf` agregado: una página, legible, sin contraseña y con firma visible. Copia binaria exacta del archivo entregado por el estudiante.
 - [x] `docs/informe_final.pdf` agregado: versión final proporcionada por el estudiante, 92 páginas, legible y sin contraseña, con portada, índice, resumen, objetivos, marco teórico, metodología, resultados, conclusiones y bibliografía. Se conservó como copia binaria exacta y se verificó la renderización de las 92 páginas.
 - [ ] Verificar la fecha y hora límite indicadas por la universidad; no se encontró una fecha concreta en las páginas consultadas.
-- [ ] Crear el Pull Request hacia `GraduacionesUVG/2026-22076-garcia-salas-perez-julio-andres` con los entregables completos. No había un PR en la consulta previa a esta publicación del 20 de noviembre.
+- [x] [Pull Request #1](https://github.com/GraduacionesUVG/2026-22076-garcia-salas-perez-julio-andres/pull/1) creado hacia `GraduacionesUVG/2026-22076-garcia-salas-perez-julio-andres:main` desde `Hayser8:main`, abierto para revisión y sin estado de borrador.
 - [ ] Dar seguimiento al PR hasta su aprobación e integración.
 
 ## Fuentes oficiales consultadas

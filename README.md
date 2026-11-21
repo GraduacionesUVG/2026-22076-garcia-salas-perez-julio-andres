@@ -151,7 +151,7 @@ La demo narrada dura **4:09**, está en **1920 × 1080** y conserva los subtítu
 
 El informe final proporcionado por el estudiante está incluido en `docs/informe_final.pdf`: 92 páginas, sin contraseña y conservado sin modificaciones.
 
-Los entregables están incorporados. La entrega se formaliza mediante Pull Request hacia `GraduacionesUVG/2026-22076-garcia-salas-perez-julio-andres`; corresponde dar seguimiento hasta su aprobación e integración. La fecha y hora límite deben contrastarse con la comunicación de la universidad. Consultar el [checklist actualizado](docs/checklist-entrega.md).
+Los entregables están incorporados y la entrega se presentó mediante el [Pull Request #1 hacia GraduacionesUVG](https://github.com/GraduacionesUVG/2026-22076-garcia-salas-perez-julio-andres/pull/1), creado con `Hayser8` el 20 de noviembre de 2026 (Guatemala). Corresponde dar seguimiento hasta su aprobación e integración. La fecha y hora límite deben contrastarse con la comunicación de la universidad. Consultar el [checklist actualizado](docs/checklist-entrega.md).
 
 ## Autor y licencia
 
