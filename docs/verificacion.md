@@ -55,3 +55,11 @@ La revisión de audio con Earshot detectó narración en el recorrido: nivel int
 SHA-256 del video revisado: `182e26b5730d83db99ba7ac626cf7a419c274ae25dc26e13d92beef66aeb442f`.
 
 Los scripts y el plan de edición en `demo/grabacion/narracion/` se incluyen como herramientas de producción; no agregan código de frontend a la aplicación. No se modificó `src/` ni se repitieron las pruebas del servidor por esta actualización de medios y documentación. Siguen pendientes el informe final aprobado, la confirmación de la fecha y hora límite y el proceso de Pull Request con su aprobación e integración.
+
+## Incorporación del informe final del 20 de noviembre de 2026
+
+El estudiante proporcionó su informe final y solicitó incorporarlo y crear el Pull Request. Se agregó `docs/informe_final.pdf` como copia binaria exacta: **92 páginas**, **1,566,969 bytes**, sin cifrado ni contraseña. Se comprobó la extracción de texto y la renderización de las 92 páginas; se revisó visualmente una selección de portada, aprobación, contenido y anexos. El índice y el texto incluyen resumen, introducción, objetivos, antecedentes, marco teórico, metodología, resultados, discusión, conclusiones y bibliografía. No se editaron el contenido, las firmas ni la presentación del PDF.
+
+SHA-256 del informe: `1cb8f431980ba96fecaa182f8d4e2d895b649931904e88a29c8ae1009145e252`.
+
+Se actualizó el enlace del README y se retiró el informe de los documentos pendientes. Esta revisión no revalida académicamente el trabajo ni vuelve a ejecutar las pruebas históricas del servidor: solo incorpora el documento final y prepara su entrega. La aprobación e integración del Pull Request corresponden a la universidad; la fecha límite debe confirmarse con su comunicación oficial.

@@ -9,4 +9,4 @@ Alcance autorizado: extraer el servidor existente a `src/`, sin páginas ni comp
 5. Grabar una demo de 3–5 minutos, con narración explicativa y subtítulos en español, y verificar formato, duración y tamaño.
 6. Revisar secretos, ausencia de frontend y limpieza de procesos. Preparar cambios en el fork de Hayser8.
 
-Actualización del 20 de noviembre: consentimiento firmado incorporado y demo narrada verificada (4:09, 1080p, 30 fps, H.264 y audio AAC). Pendientes: informe final aprobado y confirmación de la fecha y hora límite. El PR de entrega final debe esperar al checklist completo; luego corresponde dar seguimiento hasta su aprobación e integración.
+Actualización del 20 de noviembre: consentimiento firmado incorporado, demo narrada verificada (4:09, 1080p, 30 fps, H.264 y audio AAC) e informe final proporcionado por el estudiante agregado sin modificaciones (92 páginas, sin contraseña). El estudiante solicitó formalizar la entrega mediante Pull Request. Quedan su creación, revisión e integración y la comprobación de la fecha y hora límite con la comunicación de la universidad.

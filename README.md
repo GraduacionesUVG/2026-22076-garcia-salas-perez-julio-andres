@@ -143,12 +143,15 @@ Los resultados de esta preparación y sus límites se registran en [verificació
 - [Instalación de la base de datos](docs/base-de-datos.md).
 - [Checklist de entrega](docs/checklist-entrega.md).
 - [Procedencia y exclusiones de la extracción](docs/procedencia-backend.json).
+- [Informe final del proyecto](docs/informe_final.pdf).
 
 El [consentimiento firmado](docs/consentimiento_firmado.pdf) está incluido y se conserva como fue entregado por el estudiante.
 
 La demo narrada dura **4:09**, está en **1920 × 1080** y conserva los subtítulos en español. Se verificó su decodificación completa sin errores.
 
-**Pendiente:** agregar el informe final aprobado como `docs/informe_final.pdf`, confirmar la fecha y hora límite y completar el [checklist actualizado](docs/checklist-entrega.md) antes de crear el Pull Request final. Después corresponde dar seguimiento hasta su aprobación e integración.
+El informe final proporcionado por el estudiante está incluido en `docs/informe_final.pdf`: 92 páginas, sin contraseña y conservado sin modificaciones.
+
+Los entregables están incorporados. La entrega se formaliza mediante Pull Request hacia `GraduacionesUVG/2026-22076-garcia-salas-perez-julio-andres`; corresponde dar seguimiento hasta su aprobación e integración. La fecha y hora límite deben contrastarse con la comunicación de la universidad. Consultar el [checklist actualizado](docs/checklist-entrega.md).
 
 ## Autor y licencia
 

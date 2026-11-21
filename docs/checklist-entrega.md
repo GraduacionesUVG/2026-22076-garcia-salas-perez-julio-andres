@@ -1,6 +1,6 @@
 # Checklist de entrega 2026
 
-Actualizado el **20 de noviembre de 2026**. Estado: consentimiento firmado incluido y demo narrada verificada. **No está completado al 100 %**: falta el informe final aprobado y completar el proceso de entrega mediante Pull Request.
+Actualizado el **20 de noviembre de 2026**. Estado: informe final, consentimiento firmado y demo narrada incluidos. Los entregables están preparados; quedan la formalización mediante Pull Request, su revisión e integración y la comprobación del plazo oficial.
 
 - [x] Fork de `GraduacionesUVG` con el nombre asignado, bajo `Hayser8`.
 - [x] Estructura `capturas/`, `demo/`, `docs/`, `src/` y README en la raíz.
@@ -16,9 +16,9 @@ Actualizado el **20 de noviembre de 2026**. Estado: consentimiento firmado inclu
 - [x] Recorrido de API y evidencia de limpieza documentados.
 - [x] Esquema de base de datos y verificación local de restauración incluidos.
 - [x] `docs/consentimiento_firmado.pdf` agregado: una página, legible, sin contraseña y con firma visible. Copia binaria exacta del archivo entregado por el estudiante.
-- [ ] Agregar `docs/informe_final.pdf`: informe final aprobado, legible y sin contraseña, con portada, índice, resumen, objetivos, marco teórico, metodología, resultados, conclusiones y referencias.
+- [x] `docs/informe_final.pdf` agregado: versión final proporcionada por el estudiante, 92 páginas, legible y sin contraseña, con portada, índice, resumen, objetivos, marco teórico, metodología, resultados, conclusiones y bibliografía. Se conservó como copia binaria exacta y se verificó la renderización de las 92 páginas.
 - [ ] Verificar la fecha y hora límite indicadas por la universidad; no se encontró una fecha concreta en las páginas consultadas.
-- [ ] Completar los puntos pendientes y crear el Pull Request hacia `GraduacionesUVG/2026-22076-garcia-salas-perez-julio-andres`. No había un PR en la consulta del 20 de noviembre.
+- [ ] Crear el Pull Request hacia `GraduacionesUVG/2026-22076-garcia-salas-perez-julio-andres` con los entregables completos. No había un PR en la consulta previa a esta publicación del 20 de noviembre.
 - [ ] Dar seguimiento al PR hasta su aprobación e integración.
 
 ## Fuentes oficiales consultadas

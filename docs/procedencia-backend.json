@@ -16,8 +16,6 @@
     "app/**/*.css",
     "tests de interfaz y herramientas del cliente"
   ],
-  "pending_student_documents": [
-    "docs/informe_final.pdf"
-  ],
+  "pending_student_documents": [],
   "last_delivery_update": "2026-11-20"
 }
