@@ -1,0 +1,15 @@
+meta {
+  name: 15 Verificar limpieza
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/api/projects/{{projectId}}
+  body: none
+  auth: none
+}
+
+headers {
+  Origin: {{baseUrl}}
+}

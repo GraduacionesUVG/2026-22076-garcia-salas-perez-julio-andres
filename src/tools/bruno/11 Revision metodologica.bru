@@ -1,0 +1,33 @@
+meta {
+  name: 11 Revision metodologica
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{baseUrl}}/api/projects/{{projectId}}/delimitation/review
+  body: json
+  auth: none
+}
+
+headers {
+  Origin: {{baseUrl}}
+}
+
+body:json {
+  {
+    "draft": {
+      "topic": "Prácticas de organización comunitaria",
+      "context_place": "Ciudad de Guatemala",
+      "population": "Personas adultas participantes de actividades vecinales",
+      "time_period": "Ciclo 2026",
+      "resources": "Entrevistas y notas de campo",
+      "include": [
+        "Participación voluntaria de personas adultas"
+      ],
+      "exclude": [
+        "Personas menores de edad"
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: 13 Exportar libro de codigos
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/api/projects/{{projectId}}/exports/codebook?format=md
+  body: none
+  auth: none
+}
+
+headers {
+  Origin: {{baseUrl}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: 14 Eliminar proyecto temporal
+  type: http
+  seq: 14
+}
+
+delete {
+  url: {{baseUrl}}/api/projects/{{projectId}}
+  body: none
+  auth: none
+}
+
+headers {
+  Origin: {{baseUrl}}
+}

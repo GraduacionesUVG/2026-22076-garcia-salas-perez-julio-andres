@@ -1,0 +1,26 @@
+meta {
+  name: 10 Guardar protocolo
+  type: http
+  seq: 10
+}
+
+patch {
+  url: {{baseUrl}}/api/projects/{{projectId}}/delimitation
+  body: json
+  auth: none
+}
+
+headers {
+  Origin: {{baseUrl}}
+}
+
+body:json {
+  {
+    "base_revision": {{revision}},
+    "topic": "Prácticas de organización comunitaria",
+    "context_place": "Ciudad de Guatemala",
+    "population": "Personas adultas participantes de actividades vecinales",
+    "time_period": "Ciclo 2026",
+    "resources": "Entrevistas y notas de campo"
+  }
+}

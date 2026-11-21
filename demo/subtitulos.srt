@@ -1,0 +1,159 @@
+1
+00:00:00,000 --> 00:00:07,000
+Esta es la demo del backend de investigación antropológica, es una pasada
+
+2
+00:00:07,020 --> 00:00:11,780
+rápida sobre los módulos más importantes de este proyecto, obviamente
+
+3
+00:00:11,800 --> 00:00:16,940
+incluye más módulos, pero es de donde más se destaca la importancia al
+
+4
+00:00:16,960 --> 00:00:17,760
+proyecto.
+
+5
+00:00:28,900 --> 00:00:36,220
+Login con un email y password o contraseña de QA, o sea estos son un
+
+6
+00:00:36,240 --> 00:00:41,140
+usuario smoke, un usuario solo de prueba para poder hacer todas estas
+
+7
+00:00:41,160 --> 00:00:45,540
+pruebas, igual que el proyecto y así, todo estos son datos de prueba y
+
+8
+00:00:45,560 --> 00:00:49,520
+datos dummy para poder hacer este tipo de demostración.
+
+9
+00:01:02,040 --> 00:01:06,700
+Aquí podemos ver que se crea correctamente y para esta demostración se me olvidó comentar
+
+10
+00:01:06,720 --> 00:01:11,500
+que se está usando Bruno, Bruno es como un tipo de Postman para poder
+
+11
+00:01:11,520 --> 00:01:17,800
+validar la respuesta del API, entonces se me hizo de la manera un poco más
+
+12
+00:01:17,820 --> 00:01:20,540
+gráfica,
+
+13
+00:01:21,900 --> 00:01:26,340
+Luego tenemos, para hacer una validación de entrada de un string, y es que parte
+
+14
+00:01:26,360 --> 00:01:34,840
+de los módulos siempre tienen validaciones en todos
+
+15
+00:01:34,860 --> 00:01:40,820
+los tipos de pasos, ya sea una validación de tipos o validación de esquema,
+
+16
+00:01:41,020 --> 00:01:45,860
+entonces en este caso se provocó una validación de esquema para que mínimo
+
+17
+00:01:45,880 --> 00:01:49,560
+tuviera que tener cierta cantidad de caracteres en la entrada.
+
+18
+00:02:00,780 --> 00:02:06,200
+Donde están todos los códigos y así jerarquizados y categorizados todos
+
+19
+00:02:06,220 --> 00:02:09,860
+los códigos para que después el análisis posterior sea un poco más
+
+20
+00:02:09,880 --> 00:02:21,900
+sencillo, el memo analítico sería como un borrador de un hallazgo para que
+
+21
+00:02:21,920 --> 00:02:30,260
+cuando ve el investigador pueda empezar a hacer como que esas primeras
+
+22
+00:02:30,280 --> 00:02:33,600
+ideas pues lo puede guardar, entonces aquí se hizo como que este memo y se
+
+23
+00:02:33,620 --> 00:02:35,980
+puede ver que sí se creó.
+
+24
+00:02:36,620 --> 00:02:41,060
+Luego tendríamos para poder hacer un GET hacia la delimitación, entonces
+
+25
+00:02:41,080 --> 00:02:47,980
+aquí podemos ver que devolvió bien, también para guardar un protocolo,
+
+26
+00:02:48,000 --> 00:02:51,600
+entonces esto es importante también.
+
+27
+00:02:52,640 --> 00:02:56,840
+Luego tendríamos la revisión metodológica,
+
+28
+00:02:57,500 --> 00:03:04,060
+lo que hace básicamente es, con base en heurísticas, poder decir si algo
+
+29
+00:03:04,080 --> 00:03:07,720
+está bien delimitado o si no está bien delimitado y
+
+30
+00:03:08,560 --> 00:03:11,560
+estas heurísticas se basan en la literatura, entonces aquí podemos
+
+31
+00:03:11,580 --> 00:03:17,120
+ver cómo es que el API responde en una forma estructurada, si hay algo que
+
+32
+00:03:17,140 --> 00:03:20,380
+está bien delimitado si no está bien delimitado, esto se hace con
+
+33
+00:03:20,400 --> 00:03:22,920
+heurísticas como ya comentaba en base a la literatura y también en base a
+
+34
+00:03:22,940 --> 00:03:26,520
+ciertos esquemas, porque por ejemplo una justificación de un tema no puede
+
+35
+00:03:26,540 --> 00:03:30,020
+ser de 5 palabras, es muy corto, entonces eso también lo pasamos por
+
+36
+00:03:30,040 --> 00:03:31,100
+nuestra heurística.
+
+37
+00:03:38,020 --> 00:03:44,340
+Y luego tendríamos pues como poder exportar este libro de códigos en .md,
+
+38
+00:03:44,360 --> 00:03:51,280
+luego podríamos también eliminar un proyecto para poder hacer el
+
+39
+00:03:51,300 --> 00:03:56,540
+flujo completo, verificamos si el proyecto efectivamente se borró y si
+
+40
+00:03:56,560 --> 00:04:00,940
+vemos que se borró y por último pues finalizamos la sesión.

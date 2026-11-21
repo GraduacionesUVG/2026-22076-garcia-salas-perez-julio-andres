@@ -1,0 +1,22 @@
+meta {
+  name: 05 Participantes
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/api/projects/{{projectId}}/participants
+  body: json
+  auth: none
+}
+
+headers {
+  Origin: {{baseUrl}}
+}
+
+body:json {
+  {
+    "alias": "Participante de demostración",
+    "notes": "Registro sintético; no es una persona real."
+  }
+}

@@ -1,0 +1,18 @@
+[
+  { "titulo": "Disponibilidad del servidor", "metodo": "GET", "ruta": "/api/health" },
+  { "titulo": "Inicio de sesión con la cuenta QA", "metodo": "POST", "ruta": "/api/auth/login" },
+  { "titulo": "Crear un proyecto", "metodo": "POST", "ruta": "/api/projects" },
+  { "titulo": "Nombre vacío: la API lo rechaza", "metodo": "POST", "ruta": "/api/projects" },
+  { "titulo": "Registrar un participante", "metodo": "POST", "ruta": "/api/projects/:id/participants" },
+  { "titulo": "Agregar una entrevista al corpus", "metodo": "POST", "ruta": "/api/projects/:id/documents" },
+  { "titulo": "Crear un código", "metodo": "POST", "ruta": "/api/projects/:id/analysis/codes" },
+  { "titulo": "Escribir un memo analítico", "metodo": "POST", "ruta": "/api/projects/:id/analysis/memos" },
+  { "titulo": "Leer la delimitación", "metodo": "GET", "ruta": "/api/projects/:id/delimitation" },
+  { "titulo": "Guardar la delimitación", "metodo": "PATCH", "ruta": "/api/projects/:id/delimitation" },
+  { "titulo": "Revisión metodológica", "metodo": "POST", "ruta": "/api/projects/:id/delimitation/review" },
+  { "titulo": "Resumen del análisis", "metodo": "GET", "ruta": "/api/projects/:id/analysis/overview" },
+  { "titulo": "Exportar el libro de códigos", "metodo": "GET", "ruta": "/api/projects/:id/exports/codebook" },
+  { "titulo": "Eliminar el proyecto temporal", "metodo": "DELETE", "ruta": "/api/projects/:id" },
+  { "titulo": "Verificar que ya no existe", "metodo": "GET", "ruta": "/api/projects/:id" },
+  { "titulo": "Cerrar sesión", "metodo": "POST", "ruta": "/api/auth/logout" }
+]

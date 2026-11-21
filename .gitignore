@@ -1,0 +1,27 @@
+# Dependencies and generated outputs
+node_modules/
+.next*/
+coverage/
+__tests__/reports/
+playwright-report/
+test-results/
+*.tsbuildinfo
+.tsconfig.backend-test.json
+# Local credentials
+.env
+.env.*
+!.env.example
+!.env.backend-tests.example
+# Editor and OS artifacts
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Bruno local environments may contain credentials
+src/tools/bruno/environments/*.bru
+!src/tools/bruno/environments/Local.example.bru
+
+# Local HTTP session jars
+cookies.txt
+*.cookies

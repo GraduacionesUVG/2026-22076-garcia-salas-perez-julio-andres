@@ -1,0 +1,488 @@
+{
+  "recordedAt": "2026-11-14T18:53:41.070Z",
+  "baseURL": "http://localhost:3317",
+  "syntheticData": true,
+  "marker": "DEMO_22076_55a20d41-99a1-4860-84ab-dbd41c49932a",
+  "steps": [
+    {
+      "sequence": 1,
+      "title": "Disponibilidad del servidor",
+      "subtitle": "El endpoint público confirma que la aplicación responde.",
+      "method": "GET",
+      "path": "/api/health",
+      "status": 200,
+      "expected": 200,
+      "durationMs": 15,
+      "body": {
+        "ok": true
+      },
+      "elapsedSeconds": 0.015
+    },
+    {
+      "sequence": 2,
+      "title": "Protección de recursos",
+      "subtitle": "Una solicitud sin sesión no obtiene acceso a los proyectos.",
+      "method": "GET",
+      "path": "/api/projects",
+      "status": 401,
+      "expected": 401,
+      "durationMs": 9,
+      "body": {
+        "ok": false,
+        "error": "UNAUTHORIZED"
+      },
+      "elapsedSeconds": 0.024
+    },
+    {
+      "sequence": 3,
+      "title": "Autenticación de la cuenta QA",
+      "subtitle": "El servidor inicia una sesión mediante cookies; las credenciales permanecen ocultas.",
+      "method": "POST",
+      "path": "/api/auth/login",
+      "request": {
+        "email": "[oculto]",
+        "password": "[oculto]"
+      },
+      "status": 200,
+      "expected": 200,
+      "durationMs": 376,
+      "body": {
+        "ok": true,
+        "user": {
+          "id": "7843da8e-9671-4ebc-9d5b-c4be4b5365bc",
+          "email": "[oculto]"
+        }
+      },
+      "elapsedSeconds": 0.401
+    },
+    {
+      "sequence": 4,
+      "title": "Creación de un proyecto",
+      "subtitle": "Se crea un espacio temporal para organizar la investigación antropológica.",
+      "method": "POST",
+      "path": "/api/projects",
+      "request": {
+        "name": "DEMO_22076_55a20d41-99a1-4860-84ab-dbd41c49932a",
+        "description": "Demostración con datos sintéticos para la entrega de graduación."
+      },
+      "status": 201,
+      "expected": 201,
+      "durationMs": 461,
+      "body": {
+        "ok": true,
+        "project": {
+          "id": "44944d9f-9902-45c8-9829-ea9bc5c02328",
+          "name": "DEMO_22076_55a20d41-99a1-4860-84ab-dbd41c49932a",
+          "description": "Demostración con datos sintéticos para la entrega de graduación.",
+          "owner_id": "[oculto]",
+          "is_active": true,
+          "created_at": "2026-11-14T18:53:41.829564+00:00",
+          "updated_at": "2026-11-14T18:53:41.829564+00:00",
+          "my_role": "owner"
+        }
+      },
+      "elapsedSeconds": 0.863
+    },
+    {
+      "sequence": 5,
+      "title": "Validación de los datos de entrada",
+      "subtitle": "Un proyecto con nombre vacío se rechaza antes de persistirlo.",
+      "method": "POST",
+      "path": "/api/projects",
+      "request": {
+        "name": ""
+      },
+      "status": 400,
+      "expected": 400,
+      "durationMs": 108,
+      "body": {
+        "ok": false,
+        "error": "Validation error",
+        "details": {
+          "formErrors": [],
+          "fieldErrors": {
+            "name": [
+              "Name is required"
+            ]
+          }
+        }
+      },
+      "elapsedSeconds": 0.972
+    },
+    {
+      "sequence": 6,
+      "title": "Registro de un participante",
+      "subtitle": "El corpus identifica al participante por un alias de demostración.",
+      "method": "POST",
+      "path": "/api/projects/44944d9f-9902-45c8-9829-ea9bc5c02328/participants",
+      "request": {
+        "alias": "Participante de demostración",
+        "notes": "Registro sintético; no corresponde a una persona real."
+      },
+      "status": 201,
+      "expected": 201,
+      "durationMs": 535,
+      "body": {
+        "ok": true,
+        "participant": {
+          "id": "e0700b60-3938-4d63-87e4-97e07c871240",
+          "project_id": "44944d9f-9902-45c8-9829-ea9bc5c02328",
+          "alias": "Participante de demostración",
+          "display_name": null,
+          "notes": "Registro sintético; no corresponde a una persona real.",
+          "attributes": {},
+          "status": "active",
+          "revision": 0,
+          "created_at": "2026-11-14T18:53:42.509313+00:00",
+          "updated_at": "2026-11-14T18:53:42.509313+00:00",
+          "deleted_at": null,
+          "created_by": "[oculto]",
+          "updated_by": "[oculto]"
+        }
+      },
+      "elapsedSeconds": 1.507
+    },
+    {
+      "sequence": 7,
+      "title": "Incorporación de una entrevista",
+      "subtitle": "Se guarda un documento de campo para su posterior análisis cualitativo.",
+      "method": "POST",
+      "path": "/api/projects/44944d9f-9902-45c8-9829-ea9bc5c02328/documents",
+      "request": {
+        "title": "Entrevista sintética sobre el barrio",
+        "content": "En mi barrio nos reunimos cada semana para organizar actividades comunitarias.",
+        "document_type": "interview",
+        "location": "Ciudad de Guatemala",
+        "language": "es"
+      },
+      "status": 201,
+      "expected": 201,
+      "durationMs": 482,
+      "body": {
+        "ok": true,
+        "document": {
+          "id": "7745a097-4cd7-4abb-99b4-880739211ec1",
+          "project_id": "44944d9f-9902-45c8-9829-ea9bc5c02328",
+          "title": "Entrevista sintética sobre el barrio",
+          "content": "En mi barrio nos reunimos cada semana para organizar actividades comunitarias.",
+          "document_type": "interview",
+          "source_id": null,
+          "participant_id": null,
+          "interview_date": null,
+          "field_date": null,
+          "location": "Ciudad de Guatemala",
+          "language": "es",
+          "notes": "",
+          "metadata": {},
+          "status": "draft",
+          "character_count": 78,
+          "word_count": 11,
+          "revision": 0,
+          "created_at": "2026-11-14T18:53:42.9393+00:00",
+          "updated_at": "2026-11-14T18:53:42.9393+00:00",
+          "deleted_at": null,
+          "created_by": "[oculto]",
+          "updated_by": "[oculto]"
+        }
+      },
+      "elapsedSeconds": 1.99
+    },
+    {
+      "sequence": 8,
+      "title": "Construcción del libro de códigos",
+      "subtitle": "Los códigos organizan categorías y definiciones para interpretar el corpus.",
+      "method": "POST",
+      "path": "/api/projects/44944d9f-9902-45c8-9829-ea9bc5c02328/analysis/codes",
+      "request": {
+        "name": "Participación comunitaria",
+        "definition": "Actividades colectivas organizadas por habitantes del barrio.",
+        "color": "#0f766e"
+      },
+      "status": 201,
+      "expected": 201,
+      "durationMs": 544,
+      "body": {
+        "ok": true,
+        "code": {
+          "id": "7b1b942e-7d11-4fdb-9005-bbe437815051",
+          "project_id": "44944d9f-9902-45c8-9829-ea9bc5c02328",
+          "parent_code_id": null,
+          "name": "Participación comunitaria",
+          "description": "",
+          "definition": "Actividades colectivas organizadas por habitantes del barrio.",
+          "inclusion_criteria": "",
+          "exclusion_criteria": "",
+          "color": "#0f766e",
+          "position": 0,
+          "is_active": true,
+          "metadata": {},
+          "revision": 0,
+          "created_at": "2026-11-14T18:53:43.539448+00:00",
+          "updated_at": "2026-11-14T18:53:43.539448+00:00",
+          "deleted_at": null,
+          "created_by": "[oculto]",
+          "updated_by": "[oculto]"
+        }
+      },
+      "elapsedSeconds": 2.534
+    },
+    {
+      "sequence": 9,
+      "title": "Escritura de un memo analítico",
+      "subtitle": "Se conserva una observación interpretativa vinculada al proyecto.",
+      "method": "POST",
+      "path": "/api/projects/44944d9f-9902-45c8-9829-ea9bc5c02328/analysis/memos",
+      "request": {
+        "title": "Organización vecinal",
+        "body": "La entrevista sintética sugiere una práctica de coordinación comunitaria.",
+        "tags": [
+          "comunidad",
+          "demostración"
+        ]
+      },
+      "status": 201,
+      "expected": 201,
+      "durationMs": 575,
+      "body": {
+        "ok": true,
+        "memo": {
+          "id": "802391d5-f8a1-4866-bb35-f2ecd5bff237",
+          "project_id": "44944d9f-9902-45c8-9829-ea9bc5c02328",
+          "title": "Organización vecinal",
+          "body": "La entrevista sintética sugiere una práctica de coordinación comunitaria.",
+          "memo_type": "analytic",
+          "status": "draft",
+          "tags": [
+            "comunidad",
+            "demostración"
+          ],
+          "metadata": {},
+          "revision": 0,
+          "created_at": "2026-11-14T18:53:44.09131+00:00",
+          "updated_at": "2026-11-14T18:53:44.09131+00:00",
+          "deleted_at": null,
+          "created_by": "[oculto]",
+          "updated_by": "[oculto]"
+        }
+      },
+      "elapsedSeconds": 3.11
+    },
+    {
+      "sequence": 10,
+      "title": "Delimitación del estudio",
+      "subtitle": "El protocolo guarda tema, contexto, población y periodo con control de revisiones.",
+      "method": "PATCH",
+      "path": "/api/projects/44944d9f-9902-45c8-9829-ea9bc5c02328/delimitation",
+      "request": {
+        "base_revision": 0,
+        "topic": "Prácticas de organización comunitaria",
+        "context_place": "Ciudad de Guatemala",
+        "population": "Personas adultas participantes de actividades vecinales",
+        "time_period": "Ciclo 2026",
+        "resources": "Entrevistas y notas de campo"
+      },
+      "status": 200,
+      "expected": 200,
+      "durationMs": 641,
+      "body": {
+        "ok": true,
+        "delim": {
+          "project_id": "44944d9f-9902-45c8-9829-ea9bc5c02328",
+          "topic": "Prácticas de organización comunitaria",
+          "context_place": "Ciudad de Guatemala",
+          "population": "Personas adultas participantes de actividades vecinales",
+          "time_period": "Ciclo 2026",
+          "resources": "Entrevistas y notas de campo",
+          "revision": 1,
+          "created_at": "2026-11-14T18:53:45.463848+00:00",
+          "updated_at": "2026-11-14T18:53:45.463848+00:00",
+          "created_by": "[oculto]",
+          "updated_by": "[oculto]"
+        }
+      },
+      "elapsedSeconds": 4.516
+    },
+    {
+      "sequence": 11,
+      "title": "Revisión metodológica local",
+      "subtitle": "Sin claves de IA, la revisión utiliza reglas heurísticas y declara su origen.",
+      "method": "POST",
+      "path": "/api/projects/44944d9f-9902-45c8-9829-ea9bc5c02328/delimitation/review",
+      "request": {
+        "draft": {
+          "topic": "Prácticas de organización comunitaria",
+          "context_place": "Ciudad de Guatemala",
+          "population": "Personas adultas participantes de actividades vecinales",
+          "time_period": "Ciclo 2026",
+          "resources": "Entrevistas y notas de campo",
+          "include": [
+            "Participación voluntaria de personas adultas"
+          ],
+          "exclude": [
+            "Personas menores de edad"
+          ]
+        }
+      },
+      "status": 200,
+      "expected": 200,
+      "durationMs": 267,
+      "body": {
+        "ok": true,
+        "review": {
+          "summary": "La delimitación cubre sus componentes principales y no presenta alertas heurísticas relevantes.",
+          "overall": {
+            "score": 90,
+            "verdict": "bien_delimitada",
+            "rationale": "La puntuación se calculó con la completitud de los siete componentes y las señales heurísticas activas."
+          },
+          "fields": {
+            "topic": {
+              "score": 90,
+              "status": "bien_delimitado",
+              "note": "El tema está definido y no presenta alertas heurísticas activas.",
+              "priority": "baja"
+            },
+            "context_place": {
+              "score": 90,
+              "status": "bien_delimitado",
+              "note": "El contexto espacial está definido y no presenta alertas heurísticas activas.",
+              "priority": "baja"
+            },
+            "time_period": {
+              "score": 90,
+              "status": "bien_delimitado",
+              "note": "El periodo está definido y no presenta alertas heurísticas activas.",
+              "priority": "baja"
+            },
+            "population": {
+              "score": 90,
+              "status": "bien_delimitado",
+              "note": "El población está definido y no presenta alertas heurísticas activas.",
+              "priority": "baja"
+            },
+            "resources": {
+              "score": 90,
+              "status": "bien_delimitado",
+              "note": "El recursos está definido y no presenta alertas heurísticas activas.",
+              "priority": "baja"
+            },
+            "include": {
+              "score": 90,
+              "status": "bien_delimitado",
+              "note": "El criterios de inclusión está definido y no presenta alertas heurísticas activas.",
+              "priority": "baja"
+            },
+            "exclude": {
+              "score": 90,
+              "status": "bien_delimitado",
+              "note": "El criterios de exclusión está definido y no presenta alertas heurísticas activas.",
+              "priority": "baja"
+            }
+          },
+          "findings": [
+            {
+              "field": "overall",
+              "kind": "fortaleza",
+              "severity": "baja",
+              "title": "Delimitación consistente",
+              "message": "Los siete componentes están definidos y no presentan alertas heurísticas activas.",
+              "suggestion": "Revisa la coherencia entre tema, población, contexto y periodo antes de continuar."
+            }
+          ],
+          "jackQuestion": "¿Qué relación entre tema, población, contexto y periodo conviene revisar antes de continuar?",
+          "suggestedNextStep": "Revisa la coherencia entre tema, población, contexto y periodo antes de continuar.",
+          "source": "heuristic",
+          "model": null
+        }
+      },
+      "elapsedSeconds": 4.784
+    },
+    {
+      "sequence": 12,
+      "title": "Resumen del análisis cualitativo",
+      "subtitle": "El backend integra indicadores del corpus y de la codificación.",
+      "method": "GET",
+      "path": "/api/projects/44944d9f-9902-45c8-9829-ea9bc5c02328/analysis/overview",
+      "status": 200,
+      "expected": 200,
+      "durationMs": 954,
+      "body": {
+        "ok": true,
+        "overview": {
+          "project_id": "44944d9f-9902-45c8-9829-ea9bc5c02328",
+          "codes_count": 1,
+          "memos_count": 1,
+          "quotes_count": 0,
+          "insights_count": 0,
+          "segments_count": 0,
+          "documents_count": 1,
+          "coded_segments_count": 0,
+          "uncoded_segments_count": 0
+        }
+      },
+      "elapsedSeconds": 5.739
+    },
+    {
+      "sequence": 13,
+      "title": "Exportación del libro de códigos",
+      "subtitle": "El servidor genera un PDF y devuelve su tipo, tamaño y firma de archivo.",
+      "method": "GET",
+      "path": "/api/projects/44944d9f-9902-45c8-9829-ea9bc5c02328/exports/codebook?format=pdf",
+      "status": 200,
+      "expected": 200,
+      "durationMs": 2239,
+      "body": {
+        "content_type": "application/pdf",
+        "bytes": 1553,
+        "sha256": "5bd22088b0332c065ddb5478712d47d4f9acbdddfa88b19c3f58cb76909a2db1",
+        "signature": "25504446"
+      },
+      "elapsedSeconds": 7.98
+    },
+    {
+      "sequence": 14,
+      "title": "Aislamiento entre investigadores",
+      "subtitle": "Una segunda cuenta sin membresía no puede leer este proyecto.",
+      "method": "GET",
+      "path": "/api/projects/44944d9f-9902-45c8-9829-ea9bc5c02328",
+      "status": 403,
+      "expected": 403,
+      "durationMs": 485,
+      "body": {
+        "ok": false,
+        "error": "FORBIDDEN"
+      },
+      "elapsedSeconds": 8.667
+    },
+    {
+      "sequence": 15,
+      "title": "Eliminación del proyecto temporal",
+      "subtitle": "Se elimina exclusivamente el proyecto creado en este recorrido.",
+      "method": "DELETE",
+      "path": "/api/projects/44944d9f-9902-45c8-9829-ea9bc5c02328",
+      "status": 200,
+      "expected": 200,
+      "durationMs": 292,
+      "body": {
+        "ok": true
+      },
+      "elapsedSeconds": 9.313
+    },
+    {
+      "sequence": 16,
+      "title": "Verificación de la limpieza",
+      "subtitle": "El recurso eliminado deja de estar disponible a través de la API.",
+      "method": "GET",
+      "path": "/api/projects/44944d9f-9902-45c8-9829-ea9bc5c02328",
+      "status": 403,
+      "expected": 403,
+      "durationMs": 290,
+      "body": {
+        "ok": false,
+        "error": "FORBIDDEN"
+      },
+      "elapsedSeconds": 9.604
+    }
+  ],
+  "cleanup": true
+}
